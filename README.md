@@ -1,6 +1,6 @@
-# Design-Coding-Practice
 
-Design a 2 player tic tac toe game. The focus of this project is on object-oriented programming.
+<h><b>Design a 2 player tic tac toe game.</b></h></br>
+The focus of this project is on object-oriented programming.
 Write test case.
 
 Primary Requirement:
