@@ -16,3 +16,35 @@ Secondary requirement(not implemented)
 - reset the game
 - save players game history
 - timed game
+
+```
+public interface TicTacToeGame {
+
+	public void play(int row, int col) throws IllegalAccessException;
+
+	public boolean isGameOver();
+
+	public boolean isTie();
+
+	public Player getWinner();
+
+}
+```
+
+```
+@Test
+	void testPlayer1Wins() throws IllegalAccessException {
+		Player player1 = new Player("Barnali", 'X');
+		Player player2 = new Player("Rakshit", '0');
+		TicTacToeGame game = new TicTacToeGameImpl(player1, player2, 5);
+		game.play(0, 0);// player1
+		game.play(0, 1);// player2
+		game.play(1, 1);// player1
+		game.play(0, 2);// player2
+		game.play(2, 2);// player1
+		Player winner = game.getWinner();
+		assertTrue(winner.getName().equals("Barnali"));
+		assertTrue(game.isGameOver());
+		assertFalse(game.isTie());
+	}
+  ```
